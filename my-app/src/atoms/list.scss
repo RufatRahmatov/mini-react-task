@@ -74,20 +74,17 @@
     }
   }
 
-  .job-card {
-    position: relative;
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #f7f3f3;
-    border-radius: 10px;
-    background: #fff;
-    .job-cards {
-      display: flex;
-      height: 50px;
-      width: 80px;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-start;
+  .job-cards {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    .job-card {
+      position: relative;
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #f7f3f3;
+      border-radius: 10px;
+      background: #fff;
     }
 
     img {

@@ -22,9 +22,7 @@
             "employmentType": "Full-time",
             "salary": "Negotiable",
             "postedBy": "CEO"
-        }
-    ],
-    "jobs-2": [
+        },
         {
             "id": 2,
             "companyLogo": "link/to/logo",
@@ -35,9 +33,7 @@
             "employmentType": "Full-time",
             "salary": "Negotiable",
             "postedBy": "CEO"
-        }
-    ],
-    "jobs-3": [
+        },
         {
             "id": 3,
             "companyLogo": "Data Scientist",
@@ -48,13 +44,22 @@
             "employmentType": "Full-time",
             "salary": "Negotiable",
             "postedBy": "CEO"
-        }
-    ],
-    "jobs-4": [
+        },
         {
             "id": 4,
             "companyLogo": "link/to/logo",
             "title": "Graphic Designer",
+            "postedDate": "04 Aug 2024",
+            "candidates": 12,
+            "experience": "No experience",
+            "employmentType": "Full-time",
+            "salary": "Negotiable",
+            "postedBy": "CEO"
+        },
+        {
+            "id": 5,
+            "companyLogo": "link/to/logo",
+            "title": "Software Engineer",
             "postedDate": "04 Aug 2024",
             "candidates": 12,
             "experience": "No experience",

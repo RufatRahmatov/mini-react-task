@@ -5,14 +5,14 @@ import "./list.scss";
 
 const fetchJobs = async () => {
   try {
-    const response = await fetch("http://localhost:3001/jobs");
+    const response = await fetch("http://localhost:5000/jobs");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
+    // console.log(response.data);
     return response.json();
   } catch (error) {
     console.error("Fetching jobs failed:", error);
-    throw error;
   }
 };
 
@@ -99,124 +99,7 @@ const List = () => {
             </div>
           </div>
         ))}
-      </div>
-      <div className="job-cards">
-        {data.map((job) => (
-          <div key={job.id} className="job-card">
-            <img
-              src="https://pub-c5e31b5cdafb419fb247a8ac2e78df7a.r2.dev/mock/assets/images/company/company-1.webp"
-              alt={job.title}
-              className="company-logo"
-            />
-            <div className="job-info">
-              <h2>{job.title}</h2>
-              <p>Posted date: {job.postedDate}</p>
-              <p>{job.candidates} candidates</p>
-              <p>
-                {job.experience} | {job.employmentType}
-              </p>
-              <p>
-                {job.salary} | {job.postedBy}
-              </p>
-            </div>
-            <div className="options">
-              <button>...</button>
-              <div className="dropdown">
-                <p onClick={() => openModal(job)}>
-                  <FaEye style={{ marginRight: "10px" }} /> View
-                </p>
-                <p>
-                  <FaEdit style={{ marginRight: "10px" }} /> Edit
-                </p>
-                <p
-                  style={{ color: "#e74c3c" }}
-                  onClick={() => deleteJob(job.id)}
-                >
-                  <FaTrashAlt style={{ marginRight: "10px" }} /> Delete
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>{" "}
-      <div className="job-cards">
-        {data.map((job) => (
-          <div key={job.id} className="job-card">
-            <img
-              src="https://pub-c5e31b5cdafb419fb247a8ac2e78df7a.r2.dev/mock/assets/images/company/company-1.webp"
-              alt={job.title}
-              className="company-logo"
-            />
-            <div className="job-info">
-              <h2>{job.title}</h2>
-              <p>Posted date: {job.postedDate}</p>
-              <p>{job.candidates} candidates</p>
-              <p>
-                {job.experience} | {job.employmentType}
-              </p>
-              <p>
-                {job.salary} | {job.postedBy}
-              </p>
-            </div>
-            <div className="options">
-              <button>...</button>
-              <div className="dropdown">
-                <p onClick={() => openModal(job)}>
-                  <FaEye style={{ marginRight: "10px" }} /> View
-                </p>
-                <p>
-                  <FaEdit style={{ marginRight: "10px" }} /> Edit
-                </p>
-                <p
-                  style={{ color: "#e74c3c" }}
-                  onClick={() => deleteJob(job.id)}
-                >
-                  <FaTrashAlt style={{ marginRight: "10px" }} /> Delete
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>{" "}
-      <div className="job-cards">
-        {data.map((job) => (
-          <div key={job.id} className="job-card">
-            <img
-              src="https://pub-c5e31b5cdafb419fb247a8ac2e78df7a.r2.dev/mock/assets/images/company/company-1.webp"
-              alt={job.title}
-              className="company-logo"
-            />
-            <div className="job-info">
-              <h2>{job.title}</h2>
-              <p>Posted date: {job.postedDate}</p>
-              <p>{job.candidates} candidates</p>
-              <p>
-                {job.experience} | {job.employmentType}
-              </p>
-              <p>
-                {job.salary} | {job.postedBy}
-              </p>
-            </div>
-            <div className="options">
-              <button>...</button>
-              <div className="dropdown">
-                <p onClick={() => openModal(job)}>
-                  <FaEye style={{ marginRight: "10px" }} /> View
-                </p>
-                <p>
-                  <FaEdit style={{ marginRight: "10px" }} /> Edit
-                </p>
-                <p
-                  style={{ color: "#e74c3c" }}
-                  onClick={() => deleteJob(job.id)}
-                >
-                  <FaTrashAlt style={{ marginRight: "10px" }} /> Delete
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
       {isModalOpen && selectedJob && (
         <div className="modal">
           <div className="modal-content">
