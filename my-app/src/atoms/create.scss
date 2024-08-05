@@ -1,0 +1,159 @@
+.create-container {
+  padding: 20px;
+  padding-left: 510px;
+  padding-right: 380px;
+  margin-top: -910px;
+  .breadcrumb {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #888;
+
+    span {
+      margin-right: 5px;
+    }
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="date"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 5px;
+
+        &.error {
+          border-color: red;
+        }
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      .checkbox-group,
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        label {
+          font-size: 14px;
+          cursor: pointer;
+
+          input {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .salary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .radio-group {
+          flex: 1;
+          display: flex;
+          gap: 10px;
+        }
+
+        input[type="number"] {
+          max-width: 100px;
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      .create-job-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #555;
+        }
+
+        &:active {
+          background-color: green; // Klik edildikdə yaşıl rəngə çevrilir
+        }
+
+        &:disabled {
+          background-color: #ccc; // Deaktiv olduqda boz rəng
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .toggle-switch {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:checked {
+      background: #4caf50;
+    }
+
+    &:checked::before {
+      transform: translateX(20px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border-radius: 50%;
+      top: 1px;
+      left: 1px;
+      transition: transform 0.3s;
+    }
+  }
+}

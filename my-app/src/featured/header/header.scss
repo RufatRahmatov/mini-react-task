@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .logo-icon {
+      width: 2rem;
+      height: 2rem;
+      background-image: linear-gradient(to right, #805ad5, #d53f8c);
+      border-radius: 50%;
+    }
+
+    .team-name {
+      margin-left: 0.5rem;
+      font-weight: bold;
+    }
+
+    .status {
+      margin-left: 0.5rem;
+      background-color: #e2e8f0;
+      color: #4a5568;
+      font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+    }
+  }
+
+  .search {
+    position: absolute;
+    right: 14.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 0.5rem;
+
+    .search-input {
+      border: none;
+      background: none;
+      outline: none;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .icon-button {
+      border: none;
+      background: none;
+      outline: none;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 4px;
+      }
+    }
+
+    .profile {
+      position: relative;
+
+      .profile-pic {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+      }
+
+      .status-indicator {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0.625rem;
+        height: 0.625rem;
+        background-color: #f56565;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+    }
+  }
+}
+.icon-button {
+  color: #abb3bb;
+  div {
+    position: absolute;
+    top: 0.8rem;
+    right: 143px;
+    background-color: #eb3b3b;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+  }
+}
+img {
+  height: 20px;
+  border-radius: 5px;
+}
